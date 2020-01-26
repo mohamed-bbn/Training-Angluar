@@ -1,0 +1,45 @@
+ .error404 {
+   min-height: 500px;
+   @include flex;
+   width: $fullwidth;
+   height: $fullwidth;
+
+
+   .title {
+     @include title;
+     font-size: 140px;
+     padding: 60px $zero;
+     font-weight: bold;
+
+     &::before {
+       display: $none;
+     }
+
+     @media (max-width:991px) {
+       font-size: 100px;
+     }
+   }
+
+   p {
+     margin: $maxmargin $zero;
+     font-size: 30px;
+
+     @media (max-width:991px) {
+       margin: 40px $zero $minmargin $zero;
+       font-size: 20px;
+     }
+   }
+
+   .bottom {
+     @include bottom;
+     float: $none;
+     display: $inline;
+     padding: 10px 20px;
+
+     i {
+       font-size: 13px;
+     }
+   }
+ }
+
+ //* End Error 404

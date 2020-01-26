@@ -1,0 +1,28 @@
+<app-slider></app-slider>
+
+<section class="brands">
+  <div class="container">
+    <h2 class="title"> أخر المنتجات المضافة</h2>
+    <div class="row">
+      <div *ngFor="let item of products | paginate: { itemsPerPage:3, currentPage: p }" class="col-sm-4
+        brand-itme">
+        <a class="logobeand" routerLink="/productdetails/{{item.id}}">
+          <img src="{{item.url}}" alt="">
+          <h2>{{item.title}}</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aboutus">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 aboutus-it"><img src="{{about?.url}}" alt="توب سيرفس" title="توب سيرفس"></div>
+      <div class="col-sm-8 aboutus-it">
+        <h3 class="title-ab">{{about?.title}}</h3>
+        <p class="text"> {{about?.thumbnailUrl}}</p>
+      </div>
+    </div>
+  </div>
+</section>

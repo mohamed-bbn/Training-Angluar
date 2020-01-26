@@ -1,0 +1,112 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/aboutus';
+@import 'layout/contactus';
+@import 'layout/footer';
+@import 'layout/error404';
+@import 'layout/products';
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+  @include reset;
+}
+
+body {
+  direction: $direction;
+  text-align: $right;
+  background: $white;
+}
+
+.container {
+  clear: both;
+  @include position(relative);
+  z-index: 10;
+}
+
+
+
+.map-back {
+  @include map-back;
+}
+
+
+
+.ngx-pagination {
+  margin: 0 !important;
+  margin-top: $maxmargin !important;
+  justify-content: $center !important;
+  margin-top: 30px !important;
+  text-align: center !important;
+
+  li {
+    display: $block;
+    text-align: $center;
+    color: $blak;
+    @include border-radius(50% !important);
+    width: 40px;
+    height: 40px;
+    border: $zero;
+
+
+    a {
+      color: $blak;
+      padding-top: 6px;
+      @include border-radius(50% !important);
+      width: 40px;
+      height: 40px;
+      background: #eaeaea;
+      outline: $zero;
+      outline-style: $zero;
+      @include transition(all 0.5s ease-in-out 0s);
+    }
+  }
+
+  .current {
+    padding: $zero !important;
+    padding-top: 6px !important;
+  }
+
+  .current.active,
+  .current:hover {
+    background: #00a1d9 !important;
+    color: $white !important;
+  }
+
+}
+
+.ngx-pagination .pagination-next a::after,
+.ngx-pagination .pagination-next.disabled::after,
+.ngx-pagination .pagination-previous a::before,
+.ngx-pagination .pagination-previous.disabled::before {
+  margin: $zero !important;
+  font-size: 22px;
+  line-height: 25px !important;
+}
+
+a:hover {
+  text-decoration: $none;
+}
+
+///* End Pagination
